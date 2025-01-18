@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.10/main.min.css" rel="stylesheet">
 </head>
 <body>
     <nav>
@@ -16,6 +17,9 @@
             <a href="#services">Services</a>
             <a href="#gallery">Gallery</a>
             <a href="#contact">Contact</a>
+            <a href="https://www.instagram.com/andre_da_barber17/" target="_blank">
+                <i class="fab fa-instagram"></i> Instagram
+            </a>
         </div>
     </nav>
 
@@ -23,7 +27,7 @@
         <div class="hero">
             <h1>Welcome to Barber Brotherz</h1>
             <p>Where Style Meets Precision</p>
-            <a href="#booking" class="cta-button">Book Now</a>
+            <a href="#booking" class="cta-button">Book Now With Dre</a>
         </div>
     </header>
 
@@ -76,9 +80,8 @@
                 <p>Sunday: 10am - 6pm</p>
             </div>
             <div class="social-links">
-                <a href="#" class="social-icon"><i class="fab fa-facebook"></i></a>
-                <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
-                <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                <a href="https://www.facebook.com/profile.php?id=100001539413287" class="social-icon" target="_blank"><i class="fab fa-facebook"></i></a>
+                <a href="https://www.instagram.com/andre_da_barber17/" class="social-icon" target="_blank"><i class="fab fa-instagram"></i></a>
             </div>
         </div>
     </section>
@@ -87,6 +90,38 @@
         <p>&copy; 2024 Barber Brotherz. All rights reserved.</p>
     </footer>
 
+    <!-- Booking Modal -->
+    <div id="bookingModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2>Book Your Appointment with Dre</h2>
+            <div id="calendar"></div>
+            <div class="booking-details">
+                <h3>Selected Time</h3>
+                <p id="selectedTime"></p>
+                
+                <div class="service-selection">
+                    <h3>Select Services</h3>
+                    <div class="service-options">
+                        <label><input type="checkbox" name="service" value="Fade"> Fade ($45)</label>
+                        <label><input type="checkbox" name="service" value="Beard Trim"> Beard Trim ($35)</label>
+                        <label><input type="checkbox" name="service" value="Full Shave"> Full Shave ($40)</label>
+                        <label><input type="checkbox" name="service" value="Kid's Cut"> Kid's Cut ($30)</label>
+                        <label><input type="checkbox" name="service" value="Beard & Fade Combo"> Beard & Fade Combo ($70)</label>
+                    </div>
+                </div>
+
+                <div class="contact-info">
+                    <h3>Your Contact Info</h3>
+                    <input type="tel" id="clientPhone" placeholder="Your phone number (required)" required>
+                </div>
+
+                <button id="confirmBooking">Confirm Booking</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.10/main.min.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
